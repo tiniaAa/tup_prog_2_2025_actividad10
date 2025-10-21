@@ -1,3 +1,4 @@
-# Actividad en el aula 10. Esctructura de datos
+# Actividad 10. Estructura de datos
 
-[Enunciado](https://docs.google.com/document/d/12dy-TFaqukQgFKE7jYf2vp__p2lQIE8Z/preview)
+[Enunciado](https://github.com/UTN-FRP-TUP-Programacion-2-2025/tup_prog_2_2025_actividad10)
+
