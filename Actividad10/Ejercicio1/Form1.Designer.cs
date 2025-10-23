@@ -33,7 +33,10 @@
             btnImportarSolicitudes = new Button();
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
+            btnConfirmarAtencion = new Button();
+            lbSolicitudSeleccionado = new Label();
+            lbsColaSolicitudesAAtender = new ListBox();
+            label3 = new Label();
             SuspendLayout();
             // 
             // openFileDialog1
@@ -49,6 +52,7 @@
             lbsVerSolicitudesImportadas.ScrollAlwaysVisible = true;
             lbsVerSolicitudesImportadas.Size = new Size(273, 264);
             lbsVerSolicitudesImportadas.TabIndex = 0;
+            lbsVerSolicitudesImportadas.SelectedValueChanged += lbsVerSolicitudesImportadas_SelectedValueChanged;
             // 
             // btnImportarSolicitudes
             // 
@@ -78,21 +82,51 @@
             label2.TabIndex = 3;
             label2.Text = "Entrantes";
             // 
-            // button1
+            // btnConfirmarAtencion
             // 
-            button1.Location = new Point(291, 260);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 4;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnConfirmarAtencion.Location = new Point(318, 298);
+            btnConfirmarAtencion.Name = "btnConfirmarAtencion";
+            btnConfirmarAtencion.Size = new Size(115, 85);
+            btnConfirmarAtencion.TabIndex = 4;
+            btnConfirmarAtencion.Text = "Confirmar a cola de atencion  solicitud seleccionada";
+            btnConfirmarAtencion.UseVisualStyleBackColor = true;
+            btnConfirmarAtencion.Click += btnConfirmarAtencion_Click;
+            // 
+            // lbSolicitudSeleccionado
+            // 
+            lbSolicitudSeleccionado.BackColor = SystemColors.ActiveCaption;
+            lbSolicitudSeleccionado.Location = new Point(301, 174);
+            lbSolicitudSeleccionado.Name = "lbSolicitudSeleccionado";
+            lbSolicitudSeleccionado.Size = new Size(149, 109);
+            lbSolicitudSeleccionado.TabIndex = 5;
+            lbSolicitudSeleccionado.Text = "Seleccione desde la lista";
+            // 
+            // lbsColaSolicitudesAAtender
+            // 
+            lbsColaSolicitudesAAtender.FormattingEnabled = true;
+            lbsColaSolicitudesAAtender.Location = new Point(456, 174);
+            lbsColaSolicitudesAAtender.Name = "lbsColaSolicitudesAAtender";
+            lbsColaSolicitudesAAtender.Size = new Size(252, 264);
+            lbsColaSolicitudesAAtender.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(456, 137);
+            label3.Name = "label3";
+            label3.Size = new Size(121, 20);
+            label3.TabIndex = 7;
+            label3.Text = "Cola de atencion";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(label3);
+            Controls.Add(lbsColaSolicitudesAAtender);
+            Controls.Add(lbSolicitudSeleccionado);
+            Controls.Add(btnConfirmarAtencion);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnImportarSolicitudes);
@@ -111,6 +145,9 @@
         private Button btnImportarSolicitudes;
         private Label label1;
         private Label label2;
-        private Button button1;
+        private Button btnConfirmarAtencion;
+        private Label lbSolicitudSeleccionado;
+        private ListBox lbsColaSolicitudesAAtender;
+        private Label label3;
     }
 }

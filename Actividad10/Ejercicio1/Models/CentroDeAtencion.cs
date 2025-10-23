@@ -11,6 +11,7 @@ namespace Ejercicio1.Models
     public class CentroDeAtencion
     {
         LinkedList<Solicitud> solicitudesEntradas = new LinkedList<Solicitud>();
+        Queue<Solicitud> ColaDeAtencion = new Queue<Solicitud>();
         public void ImportarCsvSolicitudesEntrantes(FileStream sf)
         {
 
@@ -32,6 +33,21 @@ namespace Ejercicio1.Models
             return solicitudesEntradas.First;
 
         }
+        public void Atender(Solicitud solicitud)
+        {
+            if(solicitudesEntradas.Remove(solicitud)==true);
+            { ColaDeAtencion.Enqueue(solicitud); }
 
+        }
+        public string[] VerdDescripcioColaAtencion()
+        {
+            string[] descripcion = new string[ColaDeAtencion.Count];
+            int n = 0;
+            foreach (Solicitud solicitud in ColaDeAtencion)
+            {
+                descripcion[n++]=solicitud.ToString();
+            }
+            return descripcion;
+        }
     }
 }

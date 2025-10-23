@@ -35,7 +35,7 @@ namespace Ejercicio1.Models
         }
         public override string ToString()
         {
-            return $"Numero:{Numero}-----Motivo:{Motivo}";
+            return $"Numero:{Numero}\nMotivo:{Motivo}";
         }
 
 
